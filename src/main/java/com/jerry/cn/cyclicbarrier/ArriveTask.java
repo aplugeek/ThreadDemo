@@ -1,4 +1,4 @@
-package com.jerry.cn.CyclicBarrier;
+package com.jerry.cn.cyclicbarrier;
 
 /**
  * Date: 17/9/7 18:36
