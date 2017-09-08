@@ -19,10 +19,10 @@ public class CyclicTask implements Runnable {
     @Override
     public void run() {
         try {
-            System.out.println(Thread.currentThread().getName() + "is wating...");
+            System.out.println(Thread.currentThread().getName() + "is waiting...");
             doTask();
             cyclicBarrier.await();
-            System.out.println(Thread.currentThread().getName() + "is doing");
+            System.out.println(Thread.currentThread().getName() + "is done");
         } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
         }
