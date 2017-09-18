@@ -8,7 +8,7 @@ package com.jerry.cn.threadlocal;
 
 public class Connection {
     //simplely use sout replace
-    public void getConnection() {
+    public void getConnInfo() {
         System.out.println("get Connection...");
     }
 
