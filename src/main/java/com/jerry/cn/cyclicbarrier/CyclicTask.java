@@ -21,7 +21,7 @@ public class CyclicTask implements Runnable {
         try {
             System.out.println(Thread.currentThread().getName() + "is waiting...");
             doTask();
-            cyclicBarrier.await();
+            cyclicBarrier.await();// wait all thread executed this step then execute ArriveTask
             System.out.println(Thread.currentThread().getName() + "is done");
         } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
