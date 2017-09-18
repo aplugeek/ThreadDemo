@@ -21,11 +21,12 @@ public class ThreadLock {
             threads[i] = thread;
             thread.start();
         }
+        //Use join or CountDownLatch
         for (int i = 0; i < 100; i++) {
             threads[i].join();
         }
 
-
+        //Main Thread
         System.out.println(taskLocked.shareData);
     }
 

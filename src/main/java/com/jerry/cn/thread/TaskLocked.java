@@ -10,14 +10,14 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 
 public class TaskLocked implements Runnable {
-    Lock lock = new ReentrantLock(true);
+    private final Lock lock = new ReentrantLock(true);
 
     int shareData = 0;
 
     public void run() {
         lock.lock();
         try {
-            Thread.sleep(1000);
+            //Thread.sleep(1000);
             shareData++;
         } catch (Exception e) {
             e.printStackTrace();
