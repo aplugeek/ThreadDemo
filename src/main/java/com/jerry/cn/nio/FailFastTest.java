@@ -10,7 +10,7 @@ import java.util.Map;
  * @author jerry.R
  */
 
-public class Test {
+public class FailFastTest {
     public static void main(String[] args) {
         Map<String, Object> map = new HashMap<>();
         map.put("1","23");
