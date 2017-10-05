@@ -1,4 +1,4 @@
-package com.jerry.cn.archetype;
+package com.jerry.cn.designMode.archetype;
 
 /**
  * Date: 17/9/1 17:04

@@ -1,4 +1,4 @@
-package com.jerry.cn.archetype;
+package com.jerry.cn.designMode.archetype;
 
 import java.util.Hashtable;
 
