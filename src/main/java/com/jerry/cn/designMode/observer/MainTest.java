@@ -9,7 +9,7 @@ package com.jerry.cn.designMode.observer;
 public class MainTest {
     public static void main(String[] args) {
         Subject subject = new Subject();
-        new ObserverImp(subject);
+        new ObserverImp(subject);//引用传递  修改指向的堆区
         subject.setState(100);
     }
 }
