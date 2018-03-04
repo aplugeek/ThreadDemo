@@ -1,6 +1,5 @@
 package com.jerry.redisqueue;
 
-import com.jerry.cn.redisqueue.ConsumerTask.ConsumerTask;
 import com.jerry.redisqueue.ConsumerTask.ConsumerTask;
 
 /**

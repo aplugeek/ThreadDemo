@@ -1,6 +1,6 @@
 package com.jerry.filedownload.main;
 
-import com.jerry.cn.filedownload.entity.Storage;
+import com.jerry.filedownload.entity.Storage;
 
 import java.io.Closeable;
 import java.io.FileNotFoundException;

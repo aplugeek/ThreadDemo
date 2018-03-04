@@ -1,6 +1,5 @@
 package com.jerry.racecondition;
 
-import com.jerry.cn.racecondition.face.GeneratorSeq;
 import com.jerry.racecondition.face.GeneratorSeq;
 
 import java.text.SimpleDateFormat;

@@ -12,7 +12,6 @@ http://www.broadview.com.cn/31065
 */
 package com.jerry.filedownload.main;
 
-import com.jerry.cn.filedownload.entity.Storage;
 import com.jerry.filedownload.entity.Storage;
 
 import java.io.BufferedInputStream;

@@ -1,6 +1,5 @@
 package com.jerry.redisqueue.ConsumerTask;
 
-import com.jerry.cn.redisqueue.jedis.JedisFactory;
 import com.jerry.redisqueue.jedis.JedisFactory;
 import redis.clients.jedis.Jedis;
 
