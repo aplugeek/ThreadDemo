@@ -10,6 +10,8 @@ public class User {
     private String name;
     private String address;
     private int age;
+    private Byte flag;
+    private Long flag2;
 
 
     private User(UserBuilder userBuilder) {
@@ -41,6 +43,22 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Byte getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Byte flag) {
+        this.flag = flag;
+    }
+
+    public Long getFlag2() {
+        return flag2;
+    }
+
+    public void setFlag2(Long flag2) {
+        this.flag2 = flag2;
     }
 
     @Override
