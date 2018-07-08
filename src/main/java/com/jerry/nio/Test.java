@@ -35,11 +35,11 @@ public class Test {
         Map<Integer, Long> countStastic = new HashMap<>();
 
         for (int i = 0; i < 10000; i++) {
-            int curator = random.nextInt(randomList.size());
-            if(countStastic.get(randomList.get(curator))==null){
-                countStastic.put(randomList.get(curator), 1L);
+            int cursor = random.nextInt(randomList.size());
+            if(countStastic.get(randomList.get(cursor))==null){
+                countStastic.put(randomList.get(cursor), 1L);
             }else {
-                countStastic.put(randomList.get(curator), countStastic.get(randomList.get(curator)) + 1);
+                countStastic.put(randomList.get(cursor), countStastic.get(randomList.get(cursor)) + 1);
             }
         }
         System.out.println(countStastic);
