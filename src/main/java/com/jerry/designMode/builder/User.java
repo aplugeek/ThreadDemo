@@ -1,17 +1,27 @@
 package com.jerry.designMode.builder;
 
+import com.alibaba.fastjson.JSON;
+
+import java.io.Serializable;
+
 /**
  * Date: 17/9/7 13:12
  *
  * @author jerry.R
  */
 
-public class User {
+public class User implements Serializable{
     private String name;
     private String address;
     private int age;
     private Byte flag;
     private Long flag2;
+
+
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
 
     private User(UserBuilder userBuilder) {
@@ -61,15 +71,6 @@ public class User {
         this.flag2 = flag2;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", age=" + age +
-                '}';
-    }
-
     public static class UserBuilder {
 
         private String name;
@@ -96,4 +97,10 @@ public class User {
         }
 
     }
+
+    @Override
+    public String toString(){
+        return JSON.toJSONString(this);
+    }
+
 }
