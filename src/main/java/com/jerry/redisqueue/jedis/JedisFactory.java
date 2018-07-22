@@ -21,7 +21,7 @@ public class JedisFactory {
         config.setMaxIdle(5);
         config.setMaxWaitMillis(1000 * 100);
         config.setTestOnBorrow(true);
-        return new JedisPool(config, "10.19.22.116", 6379, 2 * 6000, "inspur");
+        return new JedisPool(config, "localhost", 6379, 2 * 6000);
     }
 
     public static Jedis getJedisClient(JedisPool jedisPool) {

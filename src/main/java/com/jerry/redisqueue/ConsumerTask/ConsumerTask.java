@@ -19,8 +19,15 @@ public class ConsumerTask implements Runnable {
         while (true) {
             //blocked while testQueue is null
             List<String> list = jedisClient.brpop(0, "testQueue");
-            for (String topicContent : list) {
-                System.out.println(topicContent);
+            System.out.println(list.get(1));
+            Integer count = 0;
+            if (list.get(1).split("\\[").length >= 2) {
+                count = Integer.valueOf(list.get(1).split("\\[")[1].replace("]", ""));
+            }
+            String realContent = list.get(1).replaceAll("\\[\\d*]$", "");
+            if (Integer.valueOf(realContent) % 2 == 0) {
+                if(count<10)
+                jedisClient.lpush("testQueue", String.format(realContent + "[%d]", count + 1));
             }
             //jedisClient.close();
         }

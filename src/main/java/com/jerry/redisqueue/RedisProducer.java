@@ -28,7 +28,7 @@ public class RedisProducer {
      */
     private static void redisQueue(Jedis jedisClient) {
         for (int i = 0; i < 10; i++) {
-            jedisClient.lpush("testQueue", "value2_" + i);
+            jedisClient.lpush("testQueue", String.valueOf(i));
         }
     }
 }
