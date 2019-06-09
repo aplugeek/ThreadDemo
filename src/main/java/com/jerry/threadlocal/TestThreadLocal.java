@@ -11,13 +11,13 @@ public class TestThreadLocal {
 
     public static void main(String[] args) {
         // get Connection by function  getConnection(ThreadLocal)
-        Connection connection = getConnection();
+        Connection connection = getConnection(1);
         connection.getConnInfo();
     }
 
-    private static Connection getConnection() {
+    public static Connection getConnection(int index) {
         if (threadLocal.get() == null) {
-            Connection connection = new Connection();
+            Connection connection = new Connection(index);
             threadLocal.set(connection);
             return connection;
         }

@@ -7,5 +7,5 @@ package com.jerry.designMode.observer;
  */
 
 public abstract class Observer {
-    abstract void updateNotify();
+    abstract void updateNotify(String value);
 }

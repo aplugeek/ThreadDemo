@@ -7,9 +7,15 @@ package com.jerry.threadlocal;
  */
 
 public class Connection {
+    private int index;
+
+    public Connection(int index) {
+        this.index = index;
+    }
+
     //simplely use sout replace
     public void getConnInfo() {
-        System.out.println("get Connection...");
+        System.out.println("get Connection...index:" + index);
     }
 
 }

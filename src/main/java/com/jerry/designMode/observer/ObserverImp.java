@@ -7,14 +7,8 @@ package com.jerry.designMode.observer;
  */
 
 public class ObserverImp  extends Observer {
-    private Subject subject;
-    public ObserverImp(Subject subject) {
-        this.subject = subject;
-        subject.addObserver(this);
-    }
-
     @Override
-    void updateNotify() {
-        System.out.println("ObserverImp get update notify....updateValue: "+subject.getState());
+    void updateNotify(String value) {
+        System.out.println("ObserverImp get update notify....updateValue: "+value);
     }
 }

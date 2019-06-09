@@ -12,6 +12,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 
 public class Broker {
     private static final Integer MAX_SIZE = 10;
+    
     private static ArrayBlockingQueue<String> messageQueue = new ArrayBlockingQueue<>(MAX_SIZE);
 
     public static void produce(String message) {

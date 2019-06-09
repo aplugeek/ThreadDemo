@@ -10,7 +10,7 @@ import java.util.List;
  */
 
 public class Subject {
-    private int state;
+    private String state;
     private List<Observer> observerList = new ArrayList<>();
 
     public void addObserver(Observer observer) {
@@ -18,18 +18,19 @@ public class Subject {
 
     }
 
-    public void setState(int value) {
+    public void setState(String value) {
         this.state = value;
-        notifyAllObserver();
+        notifyAllObserver(value);
 
     }
-    public  String getState(){
+
+    public String getState() {
         return String.valueOf(state);
     }
 
-    private void notifyAllObserver() {
-        for (Observer observer:observerList){
-             observer.updateNotify();
+    private void notifyAllObserver(String value) {
+        for (Observer observer : observerList) {
+            observer.updateNotify(value);
         }
     }
 }
